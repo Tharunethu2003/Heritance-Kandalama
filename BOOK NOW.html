@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritance Hotels</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#cbac4c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<!--navigation bar-->
+<header id="header">
+    <!--adding the logo-->
+  
+   <!--Navigation Bar--> 
+   <section class="logo">
+       <a href="Heritance Kandalama.html"><img class="logo" src="./logo.png" alt="Heritance Hotel Kandalama logo" width="100px"></a>
+   </section>
+   
+   <nav>
+    <ul class="navlinks">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Accommodation.html">Accommodation</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        
+    </ul>
+</nav>
+<a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a>
+    <section class="menubtn">
+        <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+    </section>
+    <section class="dropdown_menu">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Weddings.html">Weddings and Celebrations</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Food Fest.html">Street Food Fest</a></li>
+
+        <li><a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a></li>
+    </section>
+       <script>
+           const menu_btn = document.querySelector('.menubtn')
+           const menubtnICON = document.querySelector('.menu_btn input')
+           const dropmenu = document.querySelector('.dropdown_menu')
+
+           menu_btn.onclick = function(){
+               dropmenu.classList.toggle('open')
+               const isOpen = dropmenu.classList.contains('open')
+           }
+       </script>
+  </header>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritance Hotels</title>
+    <link rel="stylesheet" href="style.css" type="text/css">    
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#cbac4c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+
+
+  <title>Hotel Booking Form</title>
+    <!-- Add any necessary CSS styles here -->
+    <h1>Hotel Booking Form</h1>
+    <form id="bookingForm" action="process_booking.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="contactNo">Contact No:</label>
+        <input type="tel" id="contactNo" name="contactNo" required><br><br>
+
+        <label for="roomType">Room Booking:</label>
+        <select id="roomType" name="roomType" required>
+            <option value="single">Superior Room</option>
+            <option value="double">Panoramic Room</option>
+            <option value="suite">Luxury Room</option>
+            <option value="suite">Luxury Panoramic Room</option>
+            <option value="suite">Deluxe Room</option>
+            <option value="suite">Royal Suite</option>
+
+        </select><br><br>
+
+        <label for="adventureType">Adventure Booking:</label>
+        <select id="adventureType" name="adventureType" required>
+            <option value="hiking">Hot Air Balloon Ride</option>
+            <option value="kayaking">Mountain Biking</option>
+            <option value="scuba">Polonnaruwa Tour</option>
+            <option value="scuba">Sigiriya Tour</option>
+            <option value="scuba">Elephant Gathering</option>
+
+        </select><br><br>
+
+        <label for="checkIn">Check-in Date:</label>
+        <input type="date" id="checkIn" name="checkIn" required><br><br>
+
+        <label for="checkOut">Check-out Date:</label>
+        <input type="date" id="checkOut" name="checkOut" required><br><br>
+
+        <label for="duration">Duration (in nights):</label>
+        <input type="number" id="duration" name="duration" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <!--footer-->
+    <footer>
+        <section class="row">
+            <section class="col">
+                <img src="./herilogo.png" alt="logo of heritance" class="footlogo">
+                <p>An unparalleled portfolio of impeccably designed hotels in destinations rich in heritage, inheritance and natural beauty. From golden beaches to emerald hills, the Heritance experience awaits guests with an eager embrace of warmth and hospitality.</p>
+            </section>
+            <section class="col">
+                <h3>Main Office<section class="underline" id="glound"><span></span></section></h3>
+                
+                <p>Aitken Spence Hotel Managements (Pvt) Ltd.</p>
+                <p>Level 5,</p>
+                <p>Aitken Spence Tower II,</p>
+                <p>315 Vauxhall Street,</p>
+                <p>Colombo 2,</p>
+                <p>Sri Lanka</p>
+                <H4 class="email-id">info@heritancehotels.com</H4>
+            </section>
+            <section class="col">
+                <h3>Links<section class="underline"><span></span></section></h3>
+                <ul>
+                    <li><a href="Heritance Kandalama.html">Home</a></li>
+                    <li><a href="Branches.html">Branches</a></li>
+                    <li><a href="Adventures.html">Adventures</a></li>
+                    <li><a href="Dining.html">Restaurants</a></li>
+                    <li><a href="BOOK NOW.html">Bookings</a></li>
+                </ul>
+            </section>
+        </section>
+        <hr>
+        <p class="copyright"> Heritance © 2023 - Tharunethu De Silva - All Rights Reserved</p>
+    </footer>
+    
+    
+    </body>
+    </html>
+    
+    
+    

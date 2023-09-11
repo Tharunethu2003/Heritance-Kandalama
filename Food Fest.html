@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritance Hotels</title>
+    <link rel="stylesheet" href="events2.css" type="text/css">    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#cbac4c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<!--navigation bar-->
+<header id="header">
+    <!--adding the logo-->
+  
+   <!--Navigation Bar--> 
+   <section class="logo">
+       <a href="Heritance Kandalama.html"><img class="logo" src="./logo.png" alt="Heritance Hotel Kandalama logo" width="100px"></a>
+   </section>
+   
+   <nav>
+    <ul class="navlinks">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Accommodation.html">Accommodation</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        
+    </ul>
+</nav>
+<a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a>
+    <section class="menubtn">
+        <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+    </section>
+    <section class="dropdown_menu">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Weddings.html">Weddings and Celebrations</a></li>
+        <li><a href="Food Fest.html">Street Food Fest</a></li>
+
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a></li>
+    </section>
+       <script>
+           const menu_btn = document.querySelector('.menubtn')
+           const menubtnICON = document.querySelector('.menu_btn input')
+           const dropmenu = document.querySelector('.dropdown_menu')
+
+           menu_btn.onclick = function(){
+               dropmenu.classList.toggle('open')
+               const isOpen = dropmenu.classList.contains('open')
+           }
+       </script>
+  </header>
+
+
+
+
+<section class="foodmainimgs">
+    <img src="Street Food Festival.jpg" alt="Street food festival" class="imgone">
+    <img src="food.jpg" alt="Street food festival" class="imgtwo">
+
+</section>
+
+
+<header>
+    <h1>Street Food Festival</h1>
+    <p>Join us for a day of delicious food and live music! where the rich historicsl heritage surrounding Heritance Kandalama will mesh with the culture of cuisine in the present.</p>
+</header>
+
+<section class="event-info">
+    <h2>Event Details</h2>
+    <p>Date: October 15th, 2023</p>
+    <p>Time: 6.00pm to 11.00pm</p>
+    <p>Location: Kanchana outdoor Cafe Lounge Heritace Hotels Kandalama</p>
+</section>
+
+<section class="food-vendors">
+    <h2>Food Vendors: We will be experimenting with streetfood art of many cultures</h2>
+    <ul>
+        <li>Sri Lankan - Hela Bojun</li>
+        <li>Indian - Sweet and Savory</li>
+        <li>Tacos and Burgers</li>
+        <li>and much much more</li>
+    </ul>
+</section>
+
+<section class="live-music">
+    <h2>Live Music Schedule</h2>
+    <ul>
+        <li><strong>12:00 PM - 1:30 PM:</strong> Centimentalian</li>
+        <li><strong>2:00 PM - 3:30 PM:</strong> Five Seconds of Summer</li>
+        <li><strong>4:00 PM - 5:30 PM:</strong> Florence and the Machine</li>
+    </ul>
+</section>
+<section class="food-vendors">
+    <h2>Food Vendors</h2>
+    <ul>
+        <li>
+            <div class="vendor-info">
+                <strong>Multiple Cuisines to chose from</strong> 
+            </div>
+            <div class="vendor-image">
+                <img src="foodfest.jpg" alt="Sri Lankan" class="hover-image">
+            </div>
+        </li>
+        <li>
+            <div class="vendor-info">
+                <strong>Live music, delicious food, and great vibes await!</strong>
+             </div>
+            <div class="vendor-image">
+                <img src="livemusic.jpg" alt="music" class="hover-image">
+            </div>
+        </li>
+        <li>
+            <div class="vendor-info">
+                <strong>Savor international flavors at our street food fest</strong> 
+            </div>
+            <div class="vendor-image">
+                <img src="fest.jpg" alt="food" class="hover-image">
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="tickets">
+    <h2>Tickets</h2>
+    <p>Get your tickets now and enjoy a day of great food and music!</p>
+    <a href="ticket-sales.html" class="btn">Buy Tickets</a>
+</section>
+
+
+
+
+<!--footer-->
+<footer>
+    <section class="row">
+        <section class="col">
+            <img src="./herilogo.png" alt="logo of heritance" class="footlogo">
+            <p>An unparalleled portfolio of impeccably designed hotels in destinations rich in heritage, inheritance and natural beauty. From golden beaches to emerald hills, the Heritance experience awaits guests with an eager embrace of warmth and hospitality.</p>
+        </section>
+        <section class="col">
+            <h3>Main Office<section class="underline" id="glound"><span></span></section></h3>
+            
+            <p>Aitken Spence Hotel Managements (Pvt) Ltd.</p>
+            <p>Level 5,</p>
+            <p>Aitken Spence Tower II,</p>
+            <p>315 Vauxhall Street,</p>
+            <p>Colombo 2,</p>
+            <p>Sri Lanka</p>
+            <H4 class="email-id">info@heritancehotels.com</H4>
+        </section>
+        <section class="col">
+            <h3>Links<section class="underline"><span></span></section></h3>
+            <ul>
+                <li><a href="Heritance Kandalama.html">Home</a></li>
+                <li><a href="Branches.html">Branches</a></li>
+                <li><a href="Adventures.html">Adventures</a></li>
+                <li><a href="Dining.html">Restaurants</a></li>
+                <li><a href="BOOK NOW.html">Bookings</a></li>
+            </ul>
+        </section>
+    </section>
+    <hr>
+    <p class="copyright"> Heritance © 2023 - Tharunethu De Silva - All Rights Reserved</p>
+</footer>
+
+
+</body>
+</html>
+
+

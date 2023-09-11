@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritance Hotels</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#cbac4c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<!--navigation bar-->
+<header id="header">
+    <!--adding the logo-->
+  
+   <!--Navigation Bar--> 
+   <section class="logo">
+       <a href="Heritance Kandalama.html"><img class="logo" src="./logo.png" alt="Heritance Hotel Kandalama logo" width="100px"></a>
+   </section>
+   
+   <nav>
+    <ul class="navlinks">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Accommodation.html">Accommodation</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        
+    </ul>
+</nav>
+<a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a>
+    <section class="menubtn">
+        <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+    </section>
+    <section class="dropdown_menu">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Weddings.html">Weddings and Celebrations</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Food Fest.html">Street Food Fest</a></li>
+
+        <li><a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a></li>
+    </section>
+       <script>
+           const menu_btn = document.querySelector('.menubtn')
+           const menubtnICON = document.querySelector('.menu_btn input')
+           const dropmenu = document.querySelector('.dropdown_menu')
+
+           menu_btn.onclick = function(){
+               dropmenu.classList.toggle('open')
+               const isOpen = dropmenu.classList.contains('open')
+           }
+       </script>
+  </header>
+
+
+
+
+
+
+
+  <section class="mainimage">
+    <img src="adventures2.jpg" alt="The view of Heritance" class="responsive1">
+
+  </section>
+
+  <h1 class="advh1"> ADVENTURES TO EMBARK ON WHILE YOU'RE HERE </h1>
+
+  <section class="advcardcontainer advcardcontainer2">
+    <img src="./hotairballoon.jpg" alt="Sigiriya Rock Fortress Adventure" class="overlay">
+    <section class="container-text">
+      <h1>HOT AIR BALLOON RIDES</h1>
+      <p>Soar above Kandalama Heritance with our mesmerizing hot air balloon rides. Experience breathtaking views and
+        unforgettable moments in the serene skies of Kandalam. Join us for a unique adventure and elevate your
+        perspective to new heights. <br>
+        The hot air balloon rides at Heritance Kandalama is a complete morning experience, at sunrise – as early morning
+        rides offer the best landscape views. <br> The ride is approximately for an hour but with the time taken from
+        pick up
+        to transfer to preparation of the balloon, flight briefing, takeoff, the flight itself, landing & retrieval the
+        entire affair takes about 4 hours.</p>
+      <!-- Map container with Google Map iframe -->
+      <section class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505894.7759213888!2d80.3840151328125!3d7.863332699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afca5651d78772f%3A0x733e56dcd94f035d!2sSri%20Lanka%20Balloon%20-%20Lanka%20Ballooning%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1694320604540!5m2!1sen!2slk"
+          allowfullscreen></iframe>
+      </section>
+      <section class="advbutton">
+        <button class="advbuttonbook">
+          <a href="./BOOK NOW.html">BOOK AN ADVENTURE</a>
+        </button>
+      </section>
+    </section>
+  </section>
+
+
+
+  <section class="advcardcontainer advcardcontainer2">
+    <img src="./sigiriya.jpg" alt="Sigiriya Rock Fortress Adventure" class="overlay">
+    <section class="container-text">
+      <h1>SIGIRIYA ROCK FORTRESS TOUR</h1>
+      <p>Explore Sigiriya Rock Fortress with our guided tours from Kandalama Heritance Hotel. Immerse yourself in its
+        history and beauty. Join us for an extraordinary journey to the past.</p>
+      <!-- Map container with Google Map iframe -->
+      <section class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31611.421420416227!2d80.74423540000004!3d7.954678200000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afca0dfa73179d1%3A0x1e04c1150cff0edf!2sSigiriya!5e0!3m2!1sen!2slk!4v1694320675992!5m2!1sen!2slk"
+         allowfullscreen></iframe>
+      </section>
+      <section class="advbutton">
+        <button class="advbuttonbook">
+          <a href="./BOOK NOW.html">BOOK AN ADVENTURE</a>
+        </button>
+      </section>
+    </section>
+  </section>
+
+
+  <section class="advcardcontainer advcardcontainer2">
+    <img src="./elephant.jpg" alt="Sigiriya Rock Fortress Adventure" class="overlay">
+    <section class="container-text">
+      <h1>THE ELEPHANT GATHERING</h1>
+      <p>Step into a world of wonder at the Elephant Park. Witness the majestic giants in their natural habitat, learn
+        about their incredible lives, and create cherished memories with these gentle giants. Join us for an
+        unforgettable experience and connect with nature in a truly remarkable way</p>
+      <!-- Map container with Google Map iframe -->
+      <section class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31611.421420416227!2d80.74423540000004!3d7.954678200000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afca0dfa73179d1%3A0x1e04c1150cff0edf!2sSigiriya!5e0!3m2!1sen!2slk!4v1694320675992!5m2!1sen!2slk" allowfullscreen></iframe>
+      </section>
+      <section class="advbutton">
+        <button class="advbuttonbook">
+          <a href="./BOOK NOW.html">BOOK AN ADVENTURE</a>
+        </button>
+      </section>
+    </section>
+  </section>
+
+
+
+  <section class="advcardcontainer advcardcontainer2">
+    <img src="./polonnaruwa.jpg" alt="Sigiriya Rock Fortress Adventure" class="overlay">
+    <section class="container-text">
+      <h1> ANURADHAPURA TOUR</h1>
+      <p>Anuradhapura, founded in the 4th century BC, is the cradle of Buddhist civilisation in Sri Lanka. <br>
+        The city is one of the archaeological wonders of the world. It is home to the 2,300-year-old sacred bo tree, the
+        Sri MahaBodhiya. <br> It is also the location of the largest stupas of the ancient world the Ruwanweliseya, the
+        Jethawanaramaya and the Abhayagiriya. <br> The Jethawanaramaya was the third tallest building in the ancient
+        world,
+        after the two largest pyramids of Egypt.</p>
+      <!-- Map container with Google Map iframe -->
+      <section class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126325.568682847!2d80.40331364999999!3d8.335151849999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf4f99360e159%3A0xc111fe9ebc6dcf0e!2sAnuradhapura!5e0!3m2!1sen!2slk!4v1694320791096!5m2!1sen!2slk"
+          allowfullscreen></iframe>
+      </section>
+      <section class="advbutton">
+        <button class="advbuttonbook">
+          <a href="./BOOK NOW.html">BOOK AN ADVENTURE</a>
+        </button>
+      </section>
+    </section>
+  </section>
+
+
+  <section class="advcardcontainer advcardcontainer2">
+    <img src="./biking.jpg" alt="Sigiriya Rock Fortress Adventure" class="overlay">
+    <section class="container-text">
+      <h1>MOUNTAIN BIKING TOUR</h1>
+      <p>Embark on an exhilarating mountain biking adventure at Heritance Kandalama Hotel. Explore the scenic trails,
+        feel the thrill, and create unforgettable moments in the heart of nature. <br>Join us for an adrenaline-pumping
+        ride
+        and experience the great outdoors like never before.We have off-road bicycles you can hire that are well suited
+        to the rugged terrain and are regularly checked and maintained for your safety and comfort. <br> Please ask at
+        reception if you are interested in hiring a bike.
+        <br>
+        We provide a map with trails for you to follow. One route is to cycle around Kandalama lake. The water levels in
+        the lake vary during the year, sometimes revealing large areas of sand and mud, and sometimes isolating islands
+        on the lake.
+        <br>
+        This route takes you along grassy tracks, along the edge of the forest where you avoid the grazing cattle and
+        calves. You see water birds and hovering kites as you ride across the sandy shore to where fishermen haul their
+        catches of lake fish and the locals bathe at weekends.
+        <br>
+        The return takes you along the top of the bank, looking down from the road at fertile and irrigated farmland,
+        and passing homes, paddy fields and quiet streams.
+        <br>
+        A cycle ride around the lake can be 10-15km, depending on the water levels. The trip will take about 1.5 to 2
+        hours.
+      </p>
+      <!-- Map container with Google Map iframe -->
+      <section class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31617.57651483988!2d80.70529159999998!3d7.874437949999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afca5ea259ad4d1%3A0x8ab063da3c2b31d!2sKandalama%20Reservoir!5e0!3m2!1sen!2slk!4v1694320830709!5m2!1sen!2slk"
+          allowfullscreen></iframe>
+      </section>
+      <section class="advbutton">
+        <button class="advbuttonbook">
+          <a href="./BOOK NOW.html">BOOK AN ADVENTURE</a>
+        </button>
+      </section>
+    </section>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--FOOTER-->
+
+
+  <footer>
+    <section class="row">
+        <section class="col">
+            <img src="./herilogo.png" alt="logo of heritance" class="footlogo">
+            <p>An unparalleled portfolio of impeccably designed hotels in destinations rich in heritage, inheritance and natural beauty. From golden beaches to emerald hills, the Heritance experience awaits guests with an eager embrace of warmth and hospitality.</p>
+        </section>
+        <section class="col">
+            <h3>Main Office<section class="underline" id="glound"><span></span></section></h3>
+            
+            <p>Aitken Spence Hotel Managements (Pvt) Ltd.</p>
+            <p>Level 5,</p>
+            <p>Aitken Spence Tower II,</p>
+            <p>315 Vauxhall Street,</p>
+            <p>Colombo 2,</p>
+            <p>Sri Lanka</p>
+            <H4 class="email-id">info@heritancehotels.com</H4>
+        </section>
+        <section class="col">
+            <h3>Links<section class="underline"><span></span></section></h3>
+            <ul>
+                <li><a href="Heritance Kandalama.html">Home</a></li>
+                <li><a href="Branches.html">Branches</a></li>
+                <li><a href="Adventures.html">Adventures</a></li>
+                <li><a href="Dining.html">Restaurants</a></li>
+                <li><a href="BOOK NOW.html">Bookings</a></li>
+            </ul>
+        </section>
+    </section>
+    <hr>
+    <p class="copyright"> Heritance © 2023 - Tharunethu De Silva - All Rights Reserved</p>
+</footer>
+
+
+</body>
+</html>
+
+

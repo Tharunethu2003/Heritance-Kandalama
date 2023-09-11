@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritance Hotels</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#cbac4c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<!--navigation bar-->
+<header id="header">
+    <!--adding the logo-->
+  
+   <!--Navigation Bar--> 
+   <section class="logo">
+       <a href="Heritance Kandalama.html"><img class="logo" src="./logo.png" alt="Heritance Hotel Kandalama logo" width="100px"></a>
+   </section>
+   
+   <nav>
+    <ul class="navlinks">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Accommodation.html">Accommodation</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        
+    </ul>
+</nav>
+<a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a>
+    <section class="menubtn">
+        <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+    </section>
+    <section class="dropdown_menu">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Weddings.html">Weddings and Celebrations</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Food Fest.html">Street Food Fest</a></li>
+
+        <li><a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a></li>
+    </section>
+       <script>
+           const menu_btn = document.querySelector('.menubtn')
+           const menubtnICON = document.querySelector('.menu_btn input')
+           const dropmenu = document.querySelector('.dropdown_menu')
+
+           menu_btn.onclick = function(){
+               dropmenu.classList.toggle('open')
+               const isOpen = dropmenu.classList.contains('open')
+           }
+       </script>
+  </header>
+
+
+
+  <section class="headerimg1">
+    <img src="./header1.jpg" alt="header2">
+</section>
+
+<section class="randologo">
+    <img src="./logo2.png" alt="A second logo">
+</section>
+
+
+<section class="branches">
+    
+    
+
+    <section class="imagebox">
+        <img src="./Ahungala.jpg" alt="Heritance Hotel Ahungala">
+        <section class="text">
+            <h1>Heritance</h1>
+            <h2>AHUNGALLA</h2>
+            <br>
+            <br>
+            <p>The sparkling cobalt waters and the breeze of the ocean, like a warm embrace, welcome you to
+                Heritance Ahungalla. </p>
+                <section>
+                    <button class="Branches">
+                        <a href="">SEE MORE</a>
+                    </button>
+                </section>
+        </section>
+            <section class="map">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.634968744003!2d80.03179949999999!3d6.3115920999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1809febfcc6f7%3A0x8bcc6f168494acba!2sHeritance%20Ahungalla!5e0!3m2!1sen!2slk!4v1694062623644!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+            </section>
+    </section>
+
+    <section class="imagebox">
+        <img src="./teafactory.jpg" alt="Heritance Tea Factory Hotel">
+        <section class="text">
+            <h1>Heritance</h1>
+            <h2>TEA FACTORY</h2>
+            <br>
+            <br>
+            <p>Have you returned to 19th century Ceylon? …Possibly… A warm tea culture offers respite at the
+                highest level in Sri Lanka.</p>
+                <section>
+                    <button class="Branches">
+                        <a href="">SEE MORE</a>
+                    </button>
+                </section>
+        </section>
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1529220314487!2d80.8337237!3d6.9912627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae381aede0bc39d%3A0x6e0e80b1cff52b1c!2sHeritance%20Tea%20Factory!5e0!3m2!1sen!2slk!4v1694062728755!5m2!1sen!2slk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </section>
+    </section>
+
+    <section class="branches">
+    
+    
+
+        <section class="imagebox">
+            <img src="./ayruveda.jpg" alt="Heritance Hotel Ayurveda">
+            <section class="text">
+                <h1>Heritance</h1>
+                <h2>AYURVEDHA</h2>
+                <br>
+                <br>
+                <p>Discover serenity at Heritance Ayurveda, a beachfront resort designed by renowned architect Geoffrey Bawa. Indulge in the essence of Ayurvedic traditions amidst the tranquil surroundings of our resort and embark on a journey towards holistic well-being </p>
+                    <section>
+                        <button class="Branches">
+                            <a href="">SEE MORE</a>
+                        </button>
+                    </section>
+            </section>
+                <section class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.581655358969!2d79.98292507462956!3d6.447720993543652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae22e5d4468d827%3A0x4ca6418333873d13!2sHeritance%20Ayurveda!5e0!3m2!1sen!2slk!4v1694321151438!5m2!1sen!2slk" ></iframe>
+                </section>
+        </section>
+    
+        <section class="imagebox">
+            <img src="./negombo.jpg" alt="Heritance Negombo Hotel">
+            <section class="text">
+                <h1>Heritance</h1>
+                <h2>NEGOMBO</h2>
+                <br>
+                <br>
+                <p>Watch the sunset reflect off the mirror-like waters of the sea. Eat, sleep, wake, indulge and repeat… life in paradise.</p>
+                    <section>
+                        <button class="Branches">
+                            <a href="">SEE MORE</a>
+                        </button>
+                    </section>
+            </section>
+                <section class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.0524482277033!2d79.83599217655703!3d7.234858274132714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afca5c0b97817b3%3A0x4a93d7f2d5344757!2sHeritance%20Negombo!5e0!3m2!1sen!2slk!4v1694321193957!5m2!1sen!2slk"></iframe>
+                </section>
+            </section>
+        </section>
+
+<br>
+<br>
+<br>
+
+<section id="branchestable">
+       
+
+    <table class="hotel-table">
+        <thead>
+            <tr>
+                
+
+                <th>Branch</th>
+                <th>Summary</th>
+                <th>Location</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahungala Heritance</td>
+                <td>A luxurious beachfront resort offering a serene getaway with modern amenities.</td>
+                <td>Ahungalla, Sri Lanka</td>
+                <td><a href="https://www.ahungalaheritance.com">Visit Website</a></td>
+            </tr>
+            <tr>
+                <td>Heritance Tea Factory</td>
+                <td>A historic tea estate turned into a charming hotel amidst lush tea gardens.</td>
+                <td>Nuwara Eliya, Sri Lanka</td>
+                <td><a href="https://www.heritanceteafactory.com">Visit Website</a></td>
+            </tr>
+            <tr>
+                <td>Negombo Heritance</td>
+                <td>A coastal resort with stunning ocean views and easy access to Negombo's attractions.</td>
+                <td>Negombo, Sri Lanka</td>
+                <td><a href="https://www.negomboheritance.com">Visit Website</a></td>
+            </tr>
+            <tr>
+                <td>Ayurveda Heritance</td>
+                <td>An Ayurvedic wellness retreat, providing traditional healing and relaxation.</td>
+                <td>Kadawatha, Sri Lanka</td>
+                <td><a href="https://www.ayurvedaheritance.com">Visit Website</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>&copy; 2023 Heritance Hotels Sri Lanka</p>
+    </footer>
+
+
+    <!--footer-->
+    <footer>
+        <section class="row">
+            <section class="col">
+                <img src="./herilogo.png" alt="logo of heritance" class="footlogo">
+                <p>An unparalleled portfolio of impeccably designed hotels in destinations rich in heritage, inheritance and natural beauty. From golden beaches to emerald hills, the Heritance experience awaits guests with an eager embrace of warmth and hospitality.</p>
+            </section>
+            <section class="col">
+                <h3>Main Office<section class="underline" id="glound"><span></span></section></h3>
+                
+                <p>Aitken Spence Hotel Managements (Pvt) Ltd.</p>
+                <p>Level 5,</p>
+                <p>Aitken Spence Tower II,</p>
+                <p>315 Vauxhall Street,</p>
+                <p>Colombo 2,</p>
+                <p>Sri Lanka</p>
+                <H4 class="email-id">info@heritancehotels.com</H4>
+            </section>
+            <section class="col">
+                <h3>Links<section class="underline"><span></span></section></h3>
+                <ul>
+                    <li><a href="Heritance Kandalama.html">Home</a></li>
+                    <li><a href="Branches.html">Branches</a></li>
+                    <li><a href="Adventures.html">Adventures</a></li>
+                    <li><a href="Dining.html">Restaurants</a></li>
+                    <li><a href="BOOK NOW.html">Bookings</a></li>
+                </ul>
+            </section>
+        </section>
+        <hr>
+        <p class="copyright"> Heritance © 2023 - Tharunethu De Silva - All Rights Reserved</p>
+    </footer>
+    
+    
+    </body>
+    </html>
+    
+    
+    
+    

@@ -1,0 +1,1950 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+:root {
+    /*color pallette*/
+    --white: #fefae0;
+    --orange: #bc6c25;
+    --beige: #efdcac;
+    --pink: #d4a373;
+    --green: #606c38;
+    --dgreen: #45462a;
+    --pinkish: #b9a378;
+    --orangish: #c29b52;
+    /*fontsss*/
+    --header-font: 'Playfair Display SC', serif;
+    --content-font: 'Roboto', sans-serif;
+  
+  }
+
+
+  
+  body{
+    background-color: white;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+  /*add logo cuztomization here*/
+  
+  .logo{
+    margin-bottom: 0;
+  }
+  .logo img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 2000px){
+    .logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  /*Navigation bar with m]hamburger menu*/
+  
+  
+  *{
+  padding: 0%;
+  margin: 0%;
+  }
+  
+  
+  header{
+    margin: 0px;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(0,0,0,0.747), rgba(0,0,0,0.89));
+    font-family: var(--header-font);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    border-bottom: rgb(0, 0, 0); 
+    z-index: 5;
+  }
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+                }
+        .navlinks li{
+            display: flex;
+            flex-flow: column wrap;
+                }
+        .navlinks li a{
+            padding: 5px;
+            font-size: 7px;
+        }
+        .navlinks li a:hover{
+            font-size: 10px;
+        }
+  }
+  .navlinks li{
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  .navlinks li a{
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: px;
+    padding: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+  }
+  .navlinks li a:hover{
+    text-decoration: none;
+    color: var(--white);
+    background-color: transparent;
+    padding: 20px;
+    border: none;
+   
+    font-size: 25px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .navlinks li a:active{
+    background-color: #c59753;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+  }
+  .logo{
+    cursor: pointer;
+    margin-right: auto;
+  }
+  .book button{
+    margin-left: 20px;
+    cursor: pointer;
+    font-family: var(--header-font);
+    background-color: #c29b52;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: "Philosopher";
+    font-size: 20px;
+    padding: 11px 15px 11px 15px;
+    border:none;
+    transition: all 0.3s ease 0s;
+    color: black;
+  }
+  
+  .book button:hover{
+    cursor: pointer;
+    background-color: rgb(238, 216, 202) ;
+    text-decoration: none;
+    font-family: "Philosopher";
+    font-size: 25px;
+    padding: 20px;
+    transition: all 0.3s ease 0s;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  
+  /*Dropdown Menu*/
+  
+  .dropdown_menu{
+    display: none;
+    position:absolute;
+    top: 12%;
+    width: 100%;
+    height: 0;
+    background-color: var(--orangish) ;
+    backdrop-filter: blur(15px);
+    border-radius:5px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .dropdown_menu.open{
+    height: 500px;
+  }
+  .dropdown_menu li{
+    padding: 0.7rem;
+    padding: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .dropdown_menu li a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .dropdown_menu .book button{
+    width: 100%;
+    padding: 2%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /*hamburger icon styling*/
+  .menubtn{
+    display: none;
+    cursor: pointer;
+  }
+  .menu {
+    --s: 25px; /* size eka wenas karanna meka wenas krpn */
+    --c: rgb(255, 255, 255); /* pata pata */
+    
+    height: var(--s);
+    aspect-ratio: 1;
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--s)/2) solid #0000; 
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+           no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+           repeat-y content-box border-box;
+    background: 
+      var(--_g2) left  var(--_p,0px) top,
+      var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+      var(--_g2) right var(--_p,0px) top,
+      var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+    background-size: 
+      20% 80%,
+      40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+    cursor: pointer;
+    transition: 
+      background-position .3s var(--_s,.3s), 
+      clip-path 0s var(--_s,.6s);
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+  }
+  .menu:before,
+  .menu:after {
+    content:"";
+    position: absolute;
+    border-radius: var(--s);
+    inset: 40% 0;
+    background: var(--c);
+    transition: transform .3s calc(.3s - var(--_s,.3s));
+  }
+  
+  .menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--s));
+    --_s: 0s;
+  }
+  .menu:checked:before {
+    transform: rotate(45deg);
+  }
+  .menu:checked:after {
+    transform: rotate(-45deg);
+  }
+  .menu:focus-visible {
+    clip-path: none;
+    -webkit-mask: none;
+    border: none;
+    outline: 2px solid var(--c);
+    outline-offset: 5px;
+  }
+  
+  
+  
+  @media screen and (max-width:1000px) {
+    .navlinks, .book button{
+        display: none;
+    }
+    .menubtn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+  }
+  
+  /*text hover set to ORANGE*/
+  a:hover{
+   
+    color: var(--white);
+    
+  }
+  
+  /*main image cuztomization*/
+  .mainimage {
+    margin-left: 0px; /* Remove any margin that might be causing spacing */
+    overflow: hidden; /* Hide any content that overflows the container */
+    padding: 0;
+    width: 100%;
+  }
+  
+  /* Ensure the image scales properly within its container */
+  .responsive1 {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  
+  @media screen and (max-width: 178px){
+  .mainimage{
+    float: none;
+    width: 100%;
+  }
+  }
+  
+  .navbar, .mainimage{
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  
+  /*SUBSECTIONSSSSS*/
+  
+  /*first description*/
+  .box {
+    display: flex;
+    align-items: center; /* Center content vertically */
+  }
+  
+  .box h1,
+  .box p{
+    color: var(--dgreen);
+  }
+
+  .box h1{
+    font-family: var(--header-font);
+  }
+  
+  .box h1,
+  .box p {
+    flex: 1; /* Equal width for h1 and p */
+    padding: 20px; /* Add some padding for spacing */
+    text-align: center;
+  }
+  
+  .box p{
+    font-size: 20px;
+    font-family: var(--content-font);
+  }
+  
+  /* Media Query for screens wider than 768px */
+  @media screen and (min-width: 769px) {
+    .box {
+        margin: 0;
+        padding: 0;
+    }
+  
+    .left-image,
+    .right-image {
+        display: none; /* Hide the images on larger screens */
+    }
+  
+    .left-image2,
+    .right-image2 {
+        display: block; /* Show the images on smaller screens */
+        margin: 10px auto; /* Center the images horizontally */
+    width: 190px;
+    height: 190px;
+    }
+  }
+  
+  
+  /* Media Query for screens 768px and below */
+  @media screen and (max-width: 768px) {
+    .box {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+       
+    }
+    .left-image,
+    .right-image {
+        display: block; /* Show the images on smaller screens */
+        margin: 10px auto; /* Center the images horizontally */
+    width: 190px;
+    height: 190px;
+    }
+  
+    .left-image2,
+    .right-image2 {
+        display: none; /* Hide the images on larger screens */
+    }
+  
+    .box h1,
+    .box p {
+        border: none; /* Remove borders on smaller screens */
+        padding: 20px; /* Add padding to separate h1 and p */
+    }
+  }
+  
+  .image-container {
+    text-align: center; /* Center the images horizontally */
+  }
+  
+  .left-image2,
+  .right-image2 {
+    display: inline-block; /* Display images inline */
+    margin: 10px; /* Add margin for spacing between the images */
+  }
+  
+  @media screen and (max-width: 768px){
+    .image-container{
+        display: none;
+    }
+  }
+  
+  /*WHY BOOK US SECTION*/
+  
+  .why-container {
+    text-align: center;
+    color: var(--dgreen);
+    margin-top: 50px;
+    font-family: var(--header-font);
+    font-size: x-large;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row on smaller screens */
+    justify-content: space-between; /* Add space between cards on bigger screens */
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: calc(33.33% - 20px); /* Adjust the width for three cards per row */
+    margin-bottom: 50px;
+    margin-top: 20px;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(172, 135, 105, 0.2);
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .card:hover .image {
+    opacity: 0.3;
+  }
+  
+  .card:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: var(--green);
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    font-family: var(--content-font);
+  }
+  
+  .text a {
+    color: #ffffff;
+    border: none;
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+  
+  /* Media Query for screens smaller than 768px */
+  @media screen and (max-width: 768px) {
+    .cards-wrapper {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center cards horizontally on smaller screens */
+    }
+  
+    .card {
+        width: 80%; /* Full width for cards on smaller screens */
+    }
+  }
+  
+  
+
+
+
+  /****************
+  /*second subsection*/
+  
+  
+  .container5 {
+    background-color: #b9a378; /* Set your desired background color */
+    color: var(--white); /* Text color */
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 100vh; /* Adjust as needed */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .image5 {
+    padding: 20px; /* Add spacing around the image */
+  }
+  
+  .image5 img {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    margin-right: 5px;
+  }
+  
+  .text5 {
+    padding: 20px; /* Add spacing around the text */
+    text-align: left;
+    width: 500px;
+    height: 500px;
+    font-family: var(--content-font);
+  }
+  
+  .text5 h1 {
+    font-size: 45px; /* Adjust font size as needed */
+    margin-bottom: 20px;
+    justify-content: left;
+    text-align: left; 
+    margin-top: 150px;
+    font-family: var(--header-font);/* Adjust spacing below the heading */
+  }
+  
+  .text p {
+    font-size: 50px; /* Adjust font size as needed */
+    text-align: left;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container5 {
+        flex-direction: column; /* Change to a vertical layout on smaller screens */
+        text-align: center;
+        height: fit-content;
+        margin-bottom: 50px;
+    
+    }
+  
+    .image5 {
+        order: 2; /* Change the order of the image */
+    }
+  
+    .text5{
+        margin-top: 70px;
+    }
+    
+    
+    .text5 h1 {
+      font-size: 30px; /* Adjust font size as needed */
+      margin-bottom: 20px;
+      justify-content: left;
+      text-align: left; 
+      margin-top: 150px;
+      margin-right: 150px;/* Adjust spacing below the heading */
+    }
+  
+    .text5 p {
+      font-size: 15px; /* Adjust font size as needed */
+      text-align: left;
+      margin-right: 150px;
+    }
+  }
+  
+  /*buttonnn*/
+  
+  
+
+.videoforhome video {
+  width: 500px;
+  height: 800px;
+  object-fit: cover; /* This property ensures the video covers the entire container */
+  animation: autoplay-repeat 30s infinite alternate; /* Define an animation */
+  margin-right: 10px;
+}
+
+@keyframes autoplay-repeat {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Query for Screens Larger than 768px */
+@media screen and (max-width: 768px) {
+  .videoforhome video {
+    display: none; /* Hide the video on screens smaller than 768px */
+  }
+}
+
+/* Media Query for Screens Smaller than 768px */
+@media screen and (max-width: 768px) {
+  .videoforhome video {
+    width: 100px; /* Adjust the width for smaller screens */
+    height: 200px; /* Adjust the height for smaller screens */
+  }
+}
+
+  .card2 {
+    flex: 1;
+    background-color: var(--pinkish);
+    box-shadow: 0 4px 6px var(--dgreen);
+    border-radius: 8px;
+    padding: 35px;
+    color: var(--white);
+    margin-left: 2px;
+    margin-top: 20px; /* Add some top margin for spacing */
+  }
+  
+  .card2-content {
+    text-align: left;
+    font-size: larger;
+  }
+
+  /* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .card2 {
+      padding: 20px; /* Reduce padding for smaller screens */
+      margin-left: 0; /* Remove left margin for smaller screens */
+      margin-top: 10px; /* Adjust top margin for spacing on smaller screens */
+  }
+
+  .card2-content {
+      font-size: medium; /* Adjust font size for smaller screens */
+  }
+}
+
+  .OFFERSbtn a{
+    color: white;
+    text-decoration: none;
+  }
+
+
+  .OFFERSbtn {
+      cursor: pointer;
+      background-color: var(--orangish);
+      text-decoration: none;
+      border-radius: 20px;
+      font-family: "Philosopher";
+      font-size: 15px;
+      padding: 11px 15px;
+      border: none;
+      transition: all 0.3s ease 0s;
+      color: white;
+      margin-top: 2px;
+      margin-bottom: 25px;
+      margin-left: 50%;
+    }
+    
+    .OFFERSbtn:hover {
+      cursor: pointer;
+      background-color: var(--orangish);
+      text-decoration: none;
+      font-family: "Philosopher";
+      font-size: 20px;
+      padding: 20px 15px; /* Adjust padding as needed */
+      transition: all 0.3s ease 0s;
+      border-radius: 20px;
+      color: white;
+    }
+
+    /*ANOTHER BUTTON*/
+    
+    .OFFERSbtn2 a{
+      color: white;
+      text-decoration: none;
+    }
+  
+  
+    .OFFERSbtn2 {
+        cursor: pointer;
+        background-color: var(--orangish);
+        text-decoration: none;
+        border-radius: 20px;
+        font-family: "Philosopher";
+        font-size: 15px;
+        padding: 11px 15px;
+        border: none;
+        transition: all 0.3s ease 0s;
+        color: white;
+        margin-top: 2px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+      }
+      
+      .OFFERSbtn2:hover {
+        cursor: pointer;
+        background-color: var(--orangish);
+        text-decoration: none;
+        font-family: "Philosopher";
+        font-size: 20px;
+        padding: 20px 15px; /* Adjust padding as needed */
+        transition: all 0.3s ease 0s;
+        border-radius: 20px;
+        color: white;
+      }
+  
+  
+  
+  .card2 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .card2 p {
+    font-size: 16px;
+  }
+  
+  /* Media query for screens smaller than 768px (adjust as needed) */
+  @media (max-width: 768px) {
+    .videoforhome {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .video-container2 {
+      margin-right: 0; /* Remove right margin on smaller screens */
+      margin-bottom: 20px; /* Add bottom margin to separate video and card */
+    }
+  }
+  
+  .card2 {
+    width: 60%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+  
+  /* Styles for smaller screens (e.g., mobile devices) */
+  @media (max-width: 768px) {
+    .card2 {
+      width: 90%; /* Adjust the width for smaller screens */
+    }
+    
+    /* Adjust font size or other styles as needed for readability on smaller screens */
+    h2 {
+      font-size: 1.5rem;
+    }
+    
+    /* Center-align text within the card */
+    .card2-content {
+      text-align: center;
+    }
+    
+    /* Add padding or margin as needed for spacing on smaller screens */
+    .button-container2 {
+      margin-top: 20px;
+    }
+  }
+  
+  
+  
+  
+  /*fourth subsection*/
+  /*where????*/
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style for individual gallery images */
+.gallery image {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed */
+    margin: 10px; /* Add spacing between images */
+}
+
+.gallery image img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space under images */
+}
+  
+
+@media screen and (max-width: 480px) {
+  .image {
+      flex-basis: 100%; /* Single image per row on small screens */
+  }
+}
+  
+  
+  
+  
+  
+  
+  /*fooooterrr*/
+  .footerimg img{
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .blur-border{
+    border-bottom: 10px solid transparent;
+    filter: blur(2px);
+  }
+  
+  
+  .logo2{
+    margin-bottom: 0;
+  }
+  .logo2 img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 2000px){
+    .logo2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: 0;
+  }
+  
+  .nav-list a{
+    color: #fff;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*BRANCHES PAGE*/
+  .headerimg1 img{
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .randologo img{
+    width: 20%;
+    height: auto;
+  }
+  
+  .randologo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  .branches{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+  }
+  
+  .branches img{
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  }
+  
+  .imagebox,
+  .imagebox2 {
+    text-align: center;
+    margin: 0 0px;
+    width: 100%;
+  }
+  
+  .text,
+  .text2 {
+    margin-top: 10px;
+    background-color: #c29b52; 
+    padding: 10px;
+   
+  }
+  
+  .text h1, h2, h3, p
+  ,.text2 h1, h2, h3{
+    text-align: left;
+  }
+  
+  
+  @media screen and (max-width: 768px){
+    .text,
+    .text2 {
+      margin-right: 100px;
+      margin-left: 100px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .branches{
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping to keep items in a single column */
+      justify-content: flex-start; /* Align items in the leftmost column */
+      gap: 20px; /* Add space between imageboxes */
+    }
+    
+    .imagebox,
+    .imagebox2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+  
+    }
+  
+    .imagebox img {
+      width: 100%; /* Adjust image width as needed */
+      height: auto;
+    }
+  
+    .imagebox2 img{
+      width: 100%;
+      height: auto;
+    }
+  
+    .text,
+    .text2{
+      flex: 1;/*box should come close*/
+    }
+  }
+  
+  .map {
+    margin-top: 20px;
+  }
+  
+  /* Style the maps (iframe) */
+  .map iframe {
+    width: 100vw;
+    height: 300px;
+    border: none;
+  }
+
+  .text p{
+    font-size: larger;
+  }
+  
+  /*buttonnn*/
+  
+  
+  .Branches {
+    background-color: #7a572e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .Branches:hover {
+    background-color: #7a572e; /* Change the background color on hover */
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+    
+  }
+  
+  /* Optional: Style the link inside the button */
+  .Branches a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .containerbutton {
+        justify-content: flex-start; /* Align the button to the left on bigger screens */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .imagebox2 {
+      text-align: center;
+      float: none; /* Remove float on smaller screens */
+      margin: 0 auto; /* Center-align the imagebox on smaller screens */
+      width: 70%; /* Make it take full width on smaller screens */
+      max-width: none; /* Remove the maximum width constraint */
+    }
+  
+    .imagebox2 img {
+      width: 100%; /* Adjust image width as needed */
+      height: auto;
+    
+    }
+  
+    .imagebox2 .text2{
+      width: 70%;
+      height: auto;
+    }
+  }
+  
+  
+  .text2{
+    color: #ffffff;
+  }
+
+
+  /*TABLE*/
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  table.hotel-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  table.hotel-table th,
+  table.hotel-table td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+  }
+  
+  table.hotel-table th {
+    background-color: var(--dgreen);
+  }
+  
+  table.hotel-table tbody tr:nth-child(even) {
+    background-color: white;
+  }
+  
+  table.hotel-table a {
+    text-decoration: none;
+    color: var(--green);
+  }
+  
+  table.hotel-table a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: var(--dgreen);
+    color: white;
+    padding: 10px;
+  }
+  
+  
+  /*about us*/
+  .aboutusimg img{
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .aboutusdes p{
+   text-align: justify;
+   font-size: larger;
+   font-family: var(--content-font);
+   margin-left: 40px;
+   margin-right: 40px;
+  }
+  
+  .aboutusdes h1{
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: var(--header-font);
+  }
+  
+  .geoffreybawa {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .rounded-blur{
+    border-radius: 50%;
+    border: 10px solid transparent;
+  }
+  
+  /*ACCOMMODATION PAGE*/
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(89, 103, 84, 0.384);
+}
+
+
+
+#pacc p{
+  text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.room-type {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.room-type h2 {
+    margin: 0;
+}
+
+.room-type p {
+    margin: 10px 0;
+}
+
+.room-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/*********************DINING************RESTAURANTS*************/
+/* Common styles for all screen sizes */
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: var(--header-font);
+}
+
+.mainimage2 img {
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* Dropdown styles */
+.dropbtn {
+  background-color: #c29b52;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  align-items: right;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #c29b52;
+}
+
+/* Flex flip card styles */
+html,
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Your custom styles */
+.card-container,
+.card-container2,
+.card-container3 {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  /* Center content horizontally */
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.card-wrapper {
+  margin-bottom: 80px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #beb8b6;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(194, 152, 74);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back .textbox {
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+.flip-card-back .textbox, .textbox2 p{
+  margin-left: 70px;
+  margin-right: 30px;
+}
+
+.flip-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-wrapper .title {
+  margin-top: 30px;
+  font-size: x-large;
+  font-family: var(--header-font);
+  margin-left: 100px;
+  color: #c59753;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .card-container,
+  .card-container2,
+  .card-container3 {
+    flex-direction: column;
+    /* Stack cards vertically */
+    align-items: center;
+    /* Center content horizontally */
+  }
+  .flip-card {
+    width: 50% ;
+    /* Adjust card width for smaller screens */
+    height: auto;
+    /* card height for smaller screens */
+  }
+
+  .flip-card-back .textbox, .textbox2 p{
+    margin-left: 70px;
+    margin-right: 40px;
+
+}
+}
+  
+
+@media screen and (max-width: 468px){
+    .card-container,
+    .card-container2,
+    .card-container3 {
+      flex-direction: column;
+      /* Stack cards vertically */
+      align-items: center;
+      /* Center content horizontally */
+    }
+    .flip-card {
+      width: 50%;
+      /* Adjust card width for smaller screens */
+      height: auto;
+      /* card height for smaller screens */
+    }
+}
+
+
+
+@media screen and  (max-width: 768px) {
+  .card-container,
+  .card-container2,
+  .card-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    flex: 0 0 70%;
+    max-width: 70%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and  (max-width: 468px) {
+  .card-container,
+  .card-container2,
+  .card-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    flex: 0 0 70%;
+    max-width: 70%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/*SEE MENU BUTTON*/
+.button-container {
+}
+
+
+.SEEMENU {
+  cursor: pointer;
+  background-color: var(--orangish);
+  text-decoration: none;
+  border-radius: 20px;
+  font-family: "Philosopher";
+  font-size: 35px;
+  padding: 11px 15px;
+  border: none;
+  transition: all 0.3s ease 0s;
+  color: var(--white);
+  margin-top: 15px;
+}
+
+.SEEMENU:hover {
+  cursor: pointer;
+  background-color: var(--orangish);
+  text-decoration: none;
+  font-family: "Philosopher";
+  font-size: 50px;
+  padding: 20px 15px; /* Adjust padding as needed */
+  transition: all 0.3s ease 0s;
+  border-radius: 20px;
+  color: white;
+}
+
+
+
+
+/*events subsection*/
+
+.eventsheading{
+  font-family: var(--header-font);
+  margin-bottom: 20px
+
+}
+
+.videoforevents video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* This property ensures the video covers the entire container */
+  animation: autoplay-repeat 7s infinite alternate; /* Define an animation */
+}
+
+@keyframes autoplay-repeat {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.containerevent {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Style for each individual box */
+.boxevent {
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Style for the images */
+.boxevent img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Style for the captions */
+.boxevent p {
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--header-font);
+}
+
+
+
+.button-container {
+  text-align: center;
+}
+
+#eventsbutton {
+  cursor: pointer;
+  background-color: var(--orangish);
+  text-decoration: none;
+  border-radius: 20px;
+  font-family: "Philosopher";
+  font-size: 20px;
+  padding: 11px 15px;
+  border: none;
+  transition: all 0.3s ease 0s;
+  color: var(--white);
+  margin-top: 15px;
+}
+
+#eventsbutton:hover {
+  cursor: pointer;
+  background-color: var(--orangish);
+  text-decoration: none;
+  font-family: "Philosopher";
+  font-size: 50px;
+  padding: 20px 15px; /* Adjust padding as needed */
+  transition: all 0.3s ease 0s;
+  border-radius: 20px;
+  color: white;
+}
+
+
+
+
+
+
+/****************ADVENTURES*********/
+.mainimage5 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.advh1{
+  font-family: var(--header-font);
+  color: white;
+  margin-bottom: 40px;
+}
+.centerimage {
+  position: absolute;
+  color: var(--white);
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 400;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Shared styles for both containers */
+.advcardcontainer {
+  background-color: var(--pinkish);
+  display: flex;
+  border-radius: 15px;
+  align-items: center; /* Center vertically */
+  margin-bottom: 100px; /* Add space between containers */
+  position: relative;
+}
+
+/* Style for the image inside the first container */
+.advcardcontainer img {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px; /* Adjust the border radius as needed */
+  cursor: pointer;
+  position: relative; /* Add pointer cursor for hover effect */
+}
+
+.container-text {
+  text-align: center; /* Center text horizontally */
+  flex: 1;
+  margin-left: 20px; /* Grow to fill remaining space */
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .advcardcontainer img {
+      margin-left: 20px;
+      margin-bottom: 20px;
+  }
+}
+/* Media query for small screens (up to 600px width) */
+@media (max-width: 600px) {
+  /* Stack both containers vertically on small screens */
+  .advcardcontainer {
+      flex-direction: column;
+  }
+
+  /* Adjust image width for small screens */
+  .advcardcontainer img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+  }
+  
+  /* Remove hover effect for smaller screens */
+  .advcardcontainer .map-container {
+      display: none;
+  }
+}
+
+/* Media query for larger screens (greater than 600px width) */
+@media (max-width: 768px) {
+  /* Align the second container to the right */
+  .advcardcontainer2,
+  .advcardcontainer{
+      flex-direction: column;
+      width: 100%;
+      height: auto; /* Stack elements vertically */
+  }
+
+  /* Adjust image width for larger screens */
+  .advcardcontainer2 img {
+      width: 300px; /* Reset image width */
+      height: 300px; /* Reset image height */
+      border-radius: 10px; /* Adjust border radius as needed */
+  }
+
+  /* Move the second container below the first one */
+  .advcardcontainer2 .container-text {
+      order: 1; /* Change the order of this section */
+  }
+
+  .advbuttonbook{
+      flex: 1;
+  }
+}
+
+.advbuttonbook {
+flex: 1;
+background-color: black;
+}
+
+/*book now button over image*/
+
+.advbutton {
+  text-align: center;
+}
+
+.advbuttonbook {
+  cursor: pointer;
+  background-color: var(--orangish);
+  text-decoration: none;
+  border-radius: 20px;
+  font-family: "Philosopher";
+  font-size: 20px;
+  padding: 11px 15px;
+  border: none;
+  transition: all 0.3s ease 0s;
+  color: white;
+  margin-top: 15px;
+}
+
+.advbuttonbook a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.advbuttonbook:hover {
+  cursor: pointer;
+  background-color: var(--orangish);
+  text-decoration: none;
+  font-family: "Philosopher";
+  font-size: 35px;
+  padding: 20px 15px; /* Adjust padding as needed */
+  transition: all 0.3s ease 0s;
+  border-radius: 20px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************FOOTERRRR***********/
+:root{
+  --footbg:beige; 
+  --foottext:rgb(122, 77, 22);
+  --bigbar:rgb(187, 151, 107);
+  --smallbar:rgb(87, 50, 5);
+}
+*{
+  margin: 0%;
+  padding: 0%;
+}
+/*footer design*/
+footer p,footer h3, footer h4{
+  font-size: 20px;
+  color: var(--foottext);
+}
+footer{
+  text-decoration: none;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  background-color: var(--footbg);
+  color: var(--foottext);
+  padding: 100px 0 30px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.row{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{
+  flex-basis: 20%;
+  padding: 10px;
+}
+
+
+footer p{
+  text-align: justify;
+}
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+.email-id{
+  width: fit-content;
+  border-bottom: var(--foottext) 1px solid;
+  margin: 20px 0px;
+}
+.footlogo{
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+footer ul li{
+  text-decoration: none;
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+footer ul li a{
+  text-decoration:none;
+  color:var(--foottext);
+}
+
+hr{
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid var(--foottext);
+  margin: 20px auto;
+}
+
+.copyright{
+  text-align: center;
+}
+.underline{
+  width: 100%;
+  display: none;
+  height: 5px;
+  background: var(--bigbar);
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.underline span{
+  width: 15px;
+  height: 100%;
+  background: var(--smallbar);
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving{
+  0%{left: -20px;}
+  100%{left: 100%;}
+}
+
+@media screen and (max-width:800px){
+  footer{
+      bottom: unset;
+  }
+  .col{
+      flex-basis: 100%;
+  }
+}
+
+
+
+
+
+/*GALLERY*/
+.heading{
+  color: black;
+  font-size: 17px;
+  margin-top: 15px;
+  font-family: var(--header-font);
+  background-color: var(--pinkish);
+  text-align: center;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+}
+
+.gallery >img{
+width: 400px;
+height: 400px;
+padding: 5px;
+
+}
+
+
+
+
+
+/******BOOKING PAGE****/
+/* Style only the hotel booking form */
+#bookingForm {
+  width: 700px;
+  padding: 20px;
+  background-color: var(--orangish);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto; /* Center the form horizontally */
+  margin-bottom: 50px;
+}
+
+/* Style labels within the form */
+#bookingForm label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style text inputs and select boxes within the form */
+#bookingForm input[type="text"],
+#bookingForm input[type="email"],
+#bookingForm input[type="tel"],
+#bookingForm select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the submit button within the form */
+#bookingForm input[type="submit"] {
+  background-color: var(--dgreen);
+  color: #fff;
+  font-size: x-large;
+  padding: 10px 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the submit button on hover within the form */
+#bookingForm input[type="submit"]:hover {
+  background-color: var(--dgreen);
+  font-size: 30px;
+}
+
+
+
+
+/*accommmodation page*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.accommodation-card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  margin: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-now {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease-in-out;
+}
+
+.book-now button {
+  background-color: var(p);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.accommodation-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.accommodation-card:hover .book-now {
+  left: 0;
+}
+
+.accommodation-card:hover .book-now button {
+  background-color: var(--pinkish);
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+      align-items: center; /* Center vertically */
+  }
+}

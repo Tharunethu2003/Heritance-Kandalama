@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritance Hotels</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#cbac4c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+<!--navigation bar-->
+<header id="header">
+    <!--adding the logo-->
+  
+   <!--Navigation Bar--> 
+   <section class="logo">
+       <a href="Heritance Kandalama.html"><img class="logo" src="./logo.png" alt="Heritance Hotel Kandalama logo" width="100px"></a>
+   </section>
+   
+   <nav>
+    <ul class="navlinks">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Accommodation.html">Accommodation</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        
+    </ul>
+</nav>
+<a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a>
+    <section class="menubtn">
+        <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+    </section>
+    <section class="dropdown_menu">
+        <li><a href="Heritance Kandalama.html">Home</a></li>
+        <li><a href="Branches.html">Branches</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="Dining.html">Dining</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Weddings.html">Weddings and Celebrations</a></li>
+        <li><a href="Adventures.html">Adventures</a></li>
+        <li><a href="Food Fest.html">Street Food Fest</a></li>
+
+        <li><a class="book" a href="BOOK NOW.html" ><button>Book Now!</button></a></li>
+    </section>
+       <script>
+           const menu_btn = document.querySelector('.menubtn')
+           const menubtnICON = document.querySelector('.menu_btn input')
+           const dropmenu = document.querySelector('.dropdown_menu')
+
+           menu_btn.onclick = function(){
+               dropmenu.classList.toggle('open')
+               const isOpen = dropmenu.classList.contains('open')
+           }
+       </script>
+  </header>
+
+
+
+  <section class="mainimage2">
+    <img src="./dining2.jpg" alt="Restaurants Kandalama">
+    </section>
+  
+    <!--headerish-->
+    <section class="desc1">
+        <h1>DINING</h1>
+    </section>
+  
+    <section class="dropdown">
+      <button class="dropbtn">Select Restaurant to See Menu</button>
+        <section class="content">
+          <a href="https://www.heritancehotels.com/wp-content/uploads/2023/08/Ala-carte-2023.pdf">KANCHANA RESTAURANT</a>
+          <a href="http://www.heritancehotels.com/wp-content/uploads/2023/08/Vegetarian-Menu-2022-Copy.pdf">KALUDIYA RESTAURANT</a>
+          <a href="http://www.heritancehotels.com/wp-content/uploads/2023/08/Snacks-Menu-2023.pdf">KANCHANA LOUNGE</a>
+          <a href="http://www.heritancehotels.com/wp-content/uploads/2023/08/Beverage-2023-Final.pdf">KANCHANA BAR</a>
+      </section>
+    </section>
+  
+    <section class="card-container">
+        <div class="card-wrapper">
+          <section class="flip-card">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+                <img src="./dining5.jpg" alt="Kanchana Restaurant">
+              </section>
+              <section class="flip-card-back">
+                <section class="textbox">
+                    <h1>KANCHANA RESTAURANT</h1>
+                    <p>Type : Main Restaurant</p>
+                    <p>Type of Dining : International Cuisine, Buffet or A la Carte </p>
+                    <p>Location: In-house 6th floor</p>
+                    <p>Dress Code: Smart Casual</p>
+                </section>
+              </section>
+            </section>
+          </section>
+          <section class="title">
+          <p>KANCHANA RESTAURANT</p>
+        </section>
+        </div>
+        
+        <div class="card-wrapper">
+          <section class="flip-card">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+                <img src="res2.jpg" alt="Avatar">
+              </section>
+              <section class="flip-card-back">
+                <h1>KALUDIYA RESTAURANT</h1>
+                <p>Type : International A la Carte</p>
+                <p>Location: In-house 7th floor</p>
+                <p>Dress Code: Smart Casual</p>
+              </section>
+            </section>
+          </section>
+          <section class="title">
+            <p>KALUDIYA RESTAURANT</p>
+        </div>
+      </section>
+  
+      <section class="card-container2">
+        <div class="card-wrapper">
+          <section class="flip-card">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+                <img src="snack.jpg" alt="Avatar">
+              </section>
+              <section class="flip-card-back">
+                <h1>KANCHANA LOUNGE</h1>
+                <p>Type : Lounge</p>
+                <p>Tye of dining: Light Bites & Snack</p>
+                <p>Location: In-house 5th floor</p>
+                <p>Dress Code: Smart Casual</p>
+              </section>
+            </section>
+          </section>
+          <section class="title">
+            <p>KANCHANA LOUNGE</p>
+        </div>
+        
+        <div class="card-wrapper">
+          <section class="flip-card">
+            <section class="flip-card-inner">
+              <section class="flip-card-front">
+                <img src="bar.jpg" alt="Avatar">
+              </section>
+              <section class="flip-card-back">
+                <h1>KANCHANA BAR</h1>
+                <p>Type : Bar</p>
+                <p>Tye of dining: Bar Snacks & Beverages</p>
+                <p>Location: In-house 5th floor</p>
+                <p>Dress Code: Smart Casual</p>
+
+              </section>
+            </section>
+          </section>
+          <section class="title">
+            <p>KANCHANA BAR</p>
+        </div>
+      </section>
+  
+
+  
+  
+    <section class="EVENTS">
+  <h1 class="eventsheading">EVENTS</h1>
+  
+  <section class="videoforevents">
+    <video src="./eventsvid.mp4" autoplay loop muted></video>
+  
+    <div class="containerevent">
+      <div class="boxevent">
+        <img src="eventintro.jpg" alt="Image 1">
+        <p>Global Food Fest</p>
+        <div class="button-container">
+          <a href="Food Fest.html">
+            <button id="eventsbutton">EVENTS PAGE -></button>
+          </a>
+        </div>
+      </div>
+      <div class="boxevent">
+        <img src="eventintro2.jpg" alt="Image 2">
+        <p>Weddings and Celebrations</p>
+        <div class="button-container">
+          <a href="Weddings.html">
+            <button id="eventsbutton">EVENTS PAGE -></button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+   
+  </section>
+  
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <footer>
+      <section class="row">
+          <section class="col">
+              <img src="./herilogo.png" alt="logo of heritance" class="footlogo">
+              <p>An unparalleled portfolio of impeccably designed hotels in destinations rich in heritage, inheritance and natural beauty. From golden beaches to emerald hills, the Heritance experience awaits guests with an eager embrace of warmth and hospitality.</p>
+          </section>
+          <section class="col">
+              <h3>Main Office<section class="underline" id="glound"><span></span></section></h3>
+              
+              <p>Aitken Spence Hotel Managements (Pvt) Ltd.</p>
+              <p>Level 5,</p>
+              <p>Aitken Spence Tower II,</p>
+              <p>315 Vauxhall Street,</p>
+              <p>Colombo 2,</p>
+              <p>Sri Lanka</p>
+              <H4 class="email-id">info@heritancehotels.com</H4>
+          </section>
+          <section class="col">
+              <h3>Links<section class="underline"><span></span></section></h3>
+              <ul>
+                  <li><a href="Heritance Kandalama.html">Home</a></li>
+                  <li><a href="Branches.html">Branches</a></li>
+                  <li><a href="Adventures.html">Adventures</a></li>
+                  <li><a href="Dining.html">Restaurants</a></li>
+                  <li><a href="BOOK NOW.html">Bookings</a></li>
+              </ul>
+          </section>
+      </section>
+      <hr>
+      <p class="copyright"> Heritance © 2023 - Tharunethu De Silva - All Rights Reserved</p>
+  </footer>
+  
+  
+  </body>
+  </html>
+  
+  
+  
+  
+  

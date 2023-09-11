@@ -1,0 +1,567 @@
+
+:root{
+    /*pallette*/
+    --white: #dad9db;
+    --greyish: #b9b8b6;
+    --slightbrownishgrey: #898681;
+    --brownishgrey: #58534e;
+    --orangish: rgb(159, 109, 14);
+    --darkgrey: #282623;
+    --cursive: 'Sacramento', cursive;
+    --preetty-url: 'https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Sacramento&display=swap';
+    --header-font: 'https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap'; 
+  }
+  
+  
+  body{
+    background-color: teal;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+  }
+  /*add logo cuztomization here*/
+  
+  .logo{
+    margin-bottom: 0;
+  }
+  .logo img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 2000px){
+    .logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  /*Navigation bar with m]hamburger menu*/
+  
+  
+  *{
+  padding: 0%;
+  margin: 0%;
+  }
+  
+  
+  header{
+    margin: 0px;
+    background-color: rgb(159, 109, 14);
+    font-family: "Philosopher";
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    border-bottom: rgb(0, 0, 0);
+  }
+  @media screen and (max-width: 768px) {
+    #header {
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+                }
+        .navlinks li{
+            display: flex;
+            flex-flow: column wrap;
+                }
+        .navlinks li a{
+            padding: 5px;
+            font-size: 7px;
+        }
+        .navlinks li a:hover{
+            font-size: 10px;
+        }
+  }
+  .navlinks li{
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  .navlinks li a{
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+  
+    border: none;
+    border-radius: px;
+    padding: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+  }
+  .navlinks li a:hover{
+    text-decoration: none;
+    color: var(--white);
+    background-color: transparent;
+    padding: 20px;
+    border: none;
+   
+    font-size: 25px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .navlinks li a:active{
+    background-color: #c59753;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+  }
+  .logo{
+    cursor: pointer;
+    margin-right: auto;
+  }
+  .book button{
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: var(--slightbrownishgrey);
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: "Philosopher";
+    font-size: 20px;
+    padding: 11px 15px 11px 15px;
+    border:none;
+    transition: all 0.3s ease 0s;
+    color: black;
+  }
+  
+  .book button:hover{
+    cursor: pointer;
+    background-color: rgb(238, 216, 202) ;
+    text-decoration: none;
+    font-family: "Philosopher";
+    font-size: 25px;
+    padding: 20px;
+    transition: all 0.3s ease 0s;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  
+  /*Dropdown Menu*/
+  
+  .dropdown_menu{
+    display: none;
+    position:absolute;
+    top: 12%;
+    width: 100%;
+    height: 0;
+    background-color: var(--orangish) ;
+    backdrop-filter: blur(15px);
+    border-radius:5px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .dropdown_menu.open{
+    height: 240px;
+  }
+  .dropdown_menu li{
+    padding: 0.7rem;
+    padding: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .dropdown_menu li a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .dropdown_menu .book button{
+    width: 100%;
+    padding: 2%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /*hamburger icon styling*/
+  .menubtn{
+    display: none;
+    cursor: pointer;
+  }
+  .menu {
+    --s: 25px; /* size eka wenas karanna meka wenas krpn */
+    --c: rgb(255, 255, 255); /* pata pata */
+    
+    height: var(--s);
+    aspect-ratio: 1;
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--s)/2) solid #0000; 
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+           no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+           repeat-y content-box border-box;
+    background: 
+      var(--_g2) left  var(--_p,0px) top,
+      var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+      var(--_g2) right var(--_p,0px) top,
+      var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+    background-size: 
+      20% 80%,
+      40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+    cursor: pointer;
+    transition: 
+      background-position .3s var(--_s,.3s), 
+      clip-path 0s var(--_s,.6s);
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+  }
+  .menu:before,
+  .menu:after {
+    content:"";
+    position: absolute;
+    border-radius: var(--s);
+    inset: 40% 0;
+    background: var(--c);
+    transition: transform .3s calc(.3s - var(--_s,.3s));
+  }
+  
+  .menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--s));
+    --_s: 0s;
+  }
+  .menu:checked:before {
+    transform: rotate(45deg);
+  }
+  .menu:checked:after {
+    transform: rotate(-45deg);
+  }
+  .menu:focus-visible {
+    clip-path: none;
+    -webkit-mask: none;
+    border: none;
+    outline: 2px solid var(--c);
+    outline-offset: 5px;
+  }
+  
+  
+  
+  @media screen and (max-width:1000px) {
+    .navlinks, .book button{
+        display: none;
+    }
+    .menubtn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+  }
+  
+  /*text hover set to ORANGE*/
+  a:hover{
+   
+    color: var(--white);
+    
+  }
+  /*main image cuztomization*/
+ /* Default styles for both images */
+.imgone,
+.imgtwo {
+    max-width: 100%; /* Make images responsive */
+}
+
+/* Hide imgtwo on larger screens */
+@media (min-width: 768px) {
+    .imgtwo {
+        display: none;
+    }
+}
+
+/* Hide imgone on smaller screens */
+@media (max-width: 767px) {
+    .imgone {
+        display: none;
+    }
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+.event-info,
+.food-vendors,
+.live-music,
+.tickets {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*fooooterrr*/
+/*footer design*/
+footer p,footer h3, footer h4{
+    font-size: 13px;
+    color: var(--foottext);
+  }
+  footer{
+    text-decoration: none;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    background-color: var(--greyish);
+    color: var(--foottext);
+    padding: 100px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .row{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .col{
+    flex-basis: 20%;
+    padding: 10px;
+  }
+  
+  
+  footer p{
+    text-align: justify;
+  }
+  .col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .email-id{
+    width: fit-content;
+    border-bottom: var(--foottext) 1px solid;
+    margin: 20px 0px;
+  }
+  .footlogo{
+    width: 80px;
+    margin-bottom: 30px;
+  }
+  
+  footer ul li{
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 12px;
+  }
+  
+  footer ul li a{
+    text-decoration:none;
+    color:var(--foottext);
+  }
+  
+  hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid var(--foottext);
+    margin: 20px auto;
+  }
+  
+  .copyright{
+    text-align: center;
+  }
+  .underline{
+    width: 100%;
+    height: 5px;
+    background: var(--bigbar);
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+  }
+  .underline span{
+    width: 15px;
+    height: 100%;
+    background: var(--smallbar);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+  }
+  @keyframes moving{
+    0%{left: -20px;}
+    100%{left: 100%;}
+  }
+  
+  @media screen and (max-width:800px){
+    footer{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.event-info,
+.food-vendors,
+.live-music,
+.tickets {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+
+
+
+
+/* ... (previous CSS code) ... */
+
+.vendor-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vendor-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.vendor-info {
+  margin-bottom: 10px;
+}
+
+.vendor-image {
+  width: 400px; /* Adjust the image size as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+.vendor-image img {
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.vendor-image .hover-image {
+  transform: scale(1);
+}
+
+.vendor-image:hover .hover-image {
+  transform: scale(1.1); /* Increase the scale for the hover effect */
+}
